@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[oc]
+*.so
+.python-version
+
+# Build
+build/
+dist/
+wheels/
+*.egg-info/
+
+# uv
+uv.lock
+venv/
+.venv/
+
+# Test
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Static analysis
+.mypy_cache/
+.pyright/
+.pytype/
+.ruff_cache/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model cache
+.cache/
+~/.cache/lode/
+
+# Secrets
+.env
+.env.*
+!.env.example/
+
+# Personal notes
+NOTES.md
+

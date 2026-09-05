@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: docker.io/pgvector/pgvector:pg17
+    container_name: lode-postgres
+    environment:
+      POSTGRES_USER: lode
+      POSTGRES_PASSWORD: lode_dev_password
+      POSTGRES_DB: lode
+    ports:
+      - "5432:5432"
+    volumes:
+      - lode_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lode -d lode"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  lode_pg_data:
